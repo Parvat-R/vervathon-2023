@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finder</title>
+    <link rel="stylesheet" href="/static/finder.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>    
+    {% if msg != None %}
+        <script>alert("{{ msg }}")</script>
+    {% endif %}
+    <div class="nav">
+        <div class="title">
+            Search For Lookups Here
+        </div>
+        <div class="links">
+            {% if username != "-1" %}
+                <a href="/profile">{{ username }}</a>
+                <a href="/logout" style="color:#f66;">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/signin">Signin</a>
+            {% endif %}
+            <a href="/">Home</a>
+        </div>
+    </div>
+
+    <div class="field">
+        <div>Enter an Email</div>
+        <form method="POST">
+            <input type="email" name="email" required/>
+            <input type="submit" id="submit" value="Search">
+            <div class="loader hide">.</div>
+        </form>
+    </div>
+    <div class="display">
+        {% if res != None %}
+            {% if email %}
+                <div class="em">Profiles of <span>{{ email }}</span></div>
+            {% endif %}
+            {% for i in res %}
+                {% if "[+]" in i %}
+                    <div class="results">{{ i.replace("[+]", "") }}</div>
+                {% endif %}
+            {% endfor %}
+            {% for i in res %}
+                {% if "[-]" in i %}
+                    <div class="resultn">{{ i.replace("[-]", "") }}</div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="nores">The sites will be shown here.</div>
+        {% endif %}
+    </div>
+
+    <script>
+        var loader = document.getElementsByClassName("loader")[0];
+        var submit = document.getElementById("submit");
+        submit.onclick = () => {
+            submit.classList.add("hide");
+            loader.classList.remove("hide");
+        }
+    </script>
+</body>
+</html>

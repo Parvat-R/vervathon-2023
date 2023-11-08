@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if msg != None %}
+        <script>alert("{{ msg }}")</script>
+    {% endif %}
+    <div class="nav">
+        <div class="title">
+            Login Here
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/signin">Signup</a>
+            <a href="/finder">Finder</a>
+        </div>
+    </div>
+
+    <section class="form">
+
+        <div class="wb">Welcome Back!</div>
+        <form method="post">
+            <div class="elem">
+                <div>Username: </div>
+                <input name="username" required/>
+            </div>
+            <div class="elem">
+                <div>Password: </div>
+                <input name="password" type="password" required/>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </section>
+
+</body>
+
+
+
+</html>
