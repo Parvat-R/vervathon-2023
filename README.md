@@ -1,26 +1,45 @@
 # Vervathon-2023
 
-## Submission Instruction:
-  1. Fork this repository
-  2. Create a folder with your Team Name and your problem statement number
-  3. Upload all the code and necessary files in the created folder
-  4. Upload a **README.md** file in your folder with the below mentioned informations.
-  5. Generate a Pull Request with your Team Name. (Example: submission-XYZ_team-1)
+## Team Name - SPARTANS
+### Problem Statement - (2) SOCIAL MEDIA ACCOUNT IDENTIFIER (FSO - CYBER PRIVACY)
+### Team Leader Email - svishnubtechit@gmail.com
 
-## README.md must consist of the following information:
-
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+---
 
 ## A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
+  ![Load Image](/static/usecasediagram.png)
   
+
 ## Tech Stack: 
-   List Down all technologies used to Build the prototype
+ - python
+   - flask
+   - subprocess
+   - requests
+   - sqlite3
+ - HTML, CSS, JS
+ - SQL
    
+---
+
+
 ## Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
+  1. Clone this repo.
+  2. Ensure that you have python >= 3.10\
+  3. Open cmd in the current directory.
+  4. run:  ```py main.py``` 
   
+---
+
 ## What I Learned:
-   Write about the biggest learning you had while developing the prototype
+   The important thing I have to mention about is that, we have improved our coordination and team work skills. We also learned that the websites that we login can make our login information publicly available. We also learned how to execute `.exe` files using subprocess and get the result in a file.
+
+---
+
+## Team Members
+```
+ - Parvat R (CSE 2nd Year)
+ - Vishnu S (IT 2nd Year)
+ - Santhosh S (CSE 2nd Year)
+```
+---
+###### Credits: `@megadose->holehe`
