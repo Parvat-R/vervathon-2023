@@ -5,7 +5,9 @@ import datetime
 def findEmailContacts(sessionid, email):
     fname = sessionid + str(datetime.datetime.now()).replace(":", "").replace("@", "") + ".txt"
     b = open(fname, "w")
-    a = subprocess.run(f"holehe {email}", stdout = b, cwd="C:\\Users\\student.MCC\\Documents\\spartans\\holehe-master")
+    path = os.path.join(os.getcwd(), "holehe-master")
+    print(path)
+    a = subprocess.run(f"holehe {email}", stdout = b, cwd="C:\\Users\\parva\\Documents\\vervathon-2023\\holehe-master")
     b.close()
     c = open(fname, "r")
     webs = []

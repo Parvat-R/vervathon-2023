@@ -1,1 +1,4 @@
 flask
+setuptools
+bs4
+holehe
