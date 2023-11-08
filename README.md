@@ -24,9 +24,10 @@
 
 ## Step-by-Step Code Execution Instructions:
   1. Clone this repo.
-  2. Ensure that you have python >= 3.10\
-  3. Open cmd in the current directory.
-  4. run:  ```py main.py``` 
+  2. Ensure that you have python >= 3.10
+  3. Install all the modules in requirements.txt
+  4. Open cmd in the current directory.
+  5. run:  ```py main.py``` 
   
 ---
 
